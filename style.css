@@ -15,6 +15,7 @@ body {
 
 .container {
   display: flex;
+  justify-content: center;
 }
 
 .card {
@@ -25,6 +26,44 @@ body {
   background: #fff;
   border-radius: 24%;
   transition: 0.4s ease-in-out;
+}
+
+/* Responsive layout - wrapping */
+/* max-width: 800px*/
+
+@media (max-width: 800px) {
+  body {
+    height: auto;
+    padding-top: 150px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+  .card {
+    margin: 0 auto 185px;
+    width: 260px;
+    height: 290px;
+  }
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+/* max-width: 1024px*/
+
+@media (max-width: 1024px) {
+  body {
+    height: auto;
+    padding-top: 150px;
+  }
+
+  .container {
+    flex-wrap: wrap;
+  }
+  .card {
+    margin: 0 auto 185px;
+    width: 260px;
+    height: 290px;
+  }
 }
 
 .card:hover {
